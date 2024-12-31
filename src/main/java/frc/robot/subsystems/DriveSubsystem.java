@@ -11,14 +11,11 @@ import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
 import edu.wpi.first.math.kinematics.SwerveDriveOdometry;
 import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
-import edu.wpi.first.wpilibj.ADIS16470_IMU;
-import edu.wpi.first.wpilibj.ADIS16470_IMU.IMUAxis;
 import frc.robot.Constants.DriveConstants;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import com.studica.frc.AHRS;
 import com.studica.frc.AHRS.NavXComType;
-import edu.wpi.first.wpilibj.SPI;
 
 public class DriveSubsystem extends SubsystemBase {
   // Create MAXSwerveModules
@@ -44,7 +41,7 @@ public class DriveSubsystem extends SubsystemBase {
 
   // The gyro sensor
   //private final ADIS16470_IMU m_gyro = new ADIS16470_IMU();
-  private final AHRS m_gyro = new AHRS(SPI.Port.kMXP);
+  private final AHRS m_gyro = new AHRS(NavXComType.kMXP_SPI);
   
   // Odometry class for tracking robot pose
   SwerveDriveOdometry m_odometry = new SwerveDriveOdometry(
