@@ -15,8 +15,6 @@ import edu.wpi.first.wpilibj.ADIS16470_IMU;
 import edu.wpi.first.wpilibj.ADIS16470_IMU.IMUAxis;
 import frc.robot.Constants.DriveConstants;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import com.studica.frc.AHRS;
-import com.studica.frc.AHRS.NavXComType;
 
 public class DriveSubsystem extends SubsystemBase {
   // Create MAXSwerveModules
