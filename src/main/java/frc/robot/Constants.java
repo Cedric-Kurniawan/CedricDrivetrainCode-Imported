@@ -39,6 +39,10 @@ public final class Constants {
         new Translation2d(-kWheelBase / 2, kTrackWidth / 2),
         new Translation2d(-kWheelBase / 2, -kTrackWidth / 2));
 
+    public static final double kDirectionSlewRate = 2.0; // radians per second
+    public static final double kMagnitudeSlewRate = 2.4; // percent per second (1 = 100%)
+    public static final double kRotationalSlewRate = 2.0; // percent per second (1 = 100%)
+    
     // Angular offsets of the modules relative to the chassis in radians
     public static final double kFrontLeftChassisAngularOffset = -Math.PI / 2;
     public static final double kFrontRightChassisAngularOffset = 0;
@@ -55,6 +59,8 @@ public final class Constants {
     public static final int kRearLeftTurningCanId = 41;
     public static final int kFrontRightTurningCanId = 21;
     public static final int kRearRightTurningCanId = 11;
+
+    public static final int kArmCANId = 12;
 
     public static final boolean kGyroReversed = false;
   }
